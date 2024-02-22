@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<link>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=1070, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/7dd35e3e4c.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="stylepage2.css"></link>
+  <title>Diabetes Calculator</title>
+  <link rel="icon" type="image/x-icon" href="https://img.icons8.com/external-flaticons-flat-flat-icons/64/null/external-diabetes-fitness-at-home-flaticons-flat-flat-icons.png">
+</head>
+<body onload="setValues()">
+    <div id="background">
+        <button type="button" id="insulinPage" onclick="window.location.href='index.html';"><i class="fa-solid fa-sliders"></i></button>
+        <div id="container">
+            <br></br>
+            <label class="label1">Carbs</label>
+            <label class="label1">Insulin</label>
+
+            <label for="input1" class="label2">00:00 - 05:30</label>
+            <input placeholder="Carbs" type="text" class="input" name="input1" id="dawnCarbRatio">
+            <input placeholder="Insulin" type="text" class="input" name="input1" id="dawnInsulinRatio">
+            
+            <label for="input2" class="label2">05:30 - 11:00</label>
+            <input placeholder="Carbs" type="text" class="input" name="input2" id="sunriseCarbRatio">
+            <input placeholder="Insulin" type="text" class="input" name="input2" id="sunriseInsulinRatio">
+            
+            <label for="input3" class="label2">11:00 - 17:00</label>
+            <input placeholder="Carbs" type="text" class="input" name="input3" id="middayCarbRatio">
+            <input placeholder="Insulin" type="text" class="input" name="input3" id="middayInsulinRatio">
+
+            <label for="input4" class="label2">17:00 - 21:30</label>
+            <input placeholder="Carbs" type="text" class="input" name="input4" id="sunsetCarbRatio">
+            <input placeholder="Insulin" type="text" class="input" name="input4" id="sunsetInsulinRatio">
+
+            <label for="input5" class="label2">21:30 - 23:59</label>
+            <input placeholder="Carbs" type="text" class="input" name="input5" id="nightCarbRatio">
+            <input placeholder="Insulin" type="text" class="input" name="input5" id="nightInsulinRatio">
+        </div>
+        <button type="button" id="submitRatios">Submit</button>
+    </div>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <!--<script src="app.js"></script>-->
+  <script>
+    const submit_button_ratios = document.getElementById('submitRatios');
+
+    submit_button_ratios.addEventListener('click', function() {
+        var ratios = {
+            dawnCarbRatio: document.getElementById('dawnCarbRatio').value,
+            dawnInsulinRatio: document.getElementById('dawnInsulinRatio').value,
+            sunriseCarbRatio: document.getElementById('sunriseCarbRatio').value,
+            sunriseInsulinRatio: document.getElementById('sunriseInsulinRatio').value,
+            middayCarbRatio: document.getElementById('middayCarbRatio').value,
+            middayInsulinRatio: document.getElementById('middayInsulinRatio').value,
+            sunsetCarbRatio: document.getElementById('sunsetCarbRatio').value,
+            sunsetInsulinRatio: document.getElementById('sunsetInsulinRatio').value,
+            nightCarbRatio: document.getElementById('nightCarbRatio').value,
+            nightInsulinRatio: document.getElementById('nightInsulinRatio').value
+        }
+        console.log(ratios);
+        var myJSONratios = JSON.stringify(ratios);
+        localStorage.setItem("myJSONratios", myJSONratios);
+    });
+
+    function setValues() {
+        var myJSONratios = localStorage.getItem("myJSONratios");
+        var ratios = JSON.parse(myJSONratios);
+        document.getElementById('dawnCarbRatio').value = ratios.dawnCarbRatio;
+        document.getElementById('dawnInsulinRatio').value = ratios.dawnInsulinRatio;
+        document.getElementById('sunriseCarbRatio').value = ratios.sunriseCarbRatio;
+        document.getElementById('sunriseInsulinRatio').value = ratios.sunriseInsulinRatio;
+        document.getElementById('middayCarbRatio').value = ratios.middayCarbRatio;
+        document.getElementById('middayInsulinRatio').value = ratios.middayInsulinRatio;
+        document.getElementById('sunsetCarbRatio').value = ratios.sunsetCarbRatio;
+        document.getElementById('sunsetInsulinRatio').value = ratios.sunsetInsulinRatio;
+        document.getElementById('nightCarbRatio').value = ratios.nightCarbRatio;
+        document.getElementById('nightInsulinRatio').value = ratios.nightInsulinRatio;
+    }
+  </script>
+</body>
+</html>
