@@ -5,40 +5,46 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=1070, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/7dd35e3e4c.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="stylepage2.css"></link>
+  <link rel="stylesheet" href="settings.css"></link>
   <title>Diabetes Calculator</title>
   <link rel="icon" type="image/x-icon" href="https://img.icons8.com/external-flaticons-flat-flat-icons/64/null/external-diabetes-fitness-at-home-flaticons-flat-flat-icons.png">
 </head>
 <body onload="setValues()">
-    <div id="background">
-        <button type="button" id="insulinPage" onclick="window.location.href='index.html';"><i class="fa-solid fa-sliders"></i></button>
-        <div id="container">
-            <br></br>
-            <label class="label1">Carbs</label>
-            <label class="label1">Insulin</label>
-
-            <label for="input1" class="label2">00:00 - 05:30</label>
-            <input placeholder="Carbs" type="text" class="input" name="input1" id="dawnCarbRatio">
-            <input placeholder="Insulin" type="text" class="input" name="input1" id="dawnInsulinRatio">
-            
-            <label for="input2" class="label2">05:30 - 11:00</label>
-            <input placeholder="Carbs" type="text" class="input" name="input2" id="sunriseCarbRatio">
-            <input placeholder="Insulin" type="text" class="input" name="input2" id="sunriseInsulinRatio">
-            
-            <label for="input3" class="label2">11:00 - 17:00</label>
-            <input placeholder="Carbs" type="text" class="input" name="input3" id="middayCarbRatio">
-            <input placeholder="Insulin" type="text" class="input" name="input3" id="middayInsulinRatio">
-
-            <label for="input4" class="label2">17:00 - 21:30</label>
-            <input placeholder="Carbs" type="text" class="input" name="input4" id="sunsetCarbRatio">
-            <input placeholder="Insulin" type="text" class="input" name="input4" id="sunsetInsulinRatio">
-
-            <label for="input5" class="label2">21:30 - 23:59</label>
-            <input placeholder="Carbs" type="text" class="input" name="input5" id="nightCarbRatio">
-            <input placeholder="Insulin" type="text" class="input" name="input5" id="nightInsulinRatio">
-        </div>
-        <button type="button" id="submitRatios">Submit</button>
+    <button type="button" id="insulinPage" onclick="window.location.href='index.html';"><i class="fa-solid fa-sliders"></i></button>
+    <div id="container">
+    
+      <div class="row">
+        <label for="input1" class="timeLabel">00:00 - 05:30</label>
+        <input placeholder="Carbs" type="text" class="input" id="dawnCarbRatio" name="input1">
+        <input placeholder="Insulin" type="text" class="input" id="dawnInsulinRatio" name="input1">
+      </div>
+    
+      <div class="row">
+        <label for="input2" class="timeLabel">05:30 - 11:00</label>
+        <input placeholder="Carbs" type="text" class="input" id="sunriseCarbRatio" name="input2">
+        <input placeholder="Insulin" type="text" class="input" id="sunriseInsulinRatio" name="input2">
+      </div>
+    
+      <div class="row">
+        <label for="input3" class="timeLabel">11:00 - 17:00</label>
+        <input placeholder="Carbs" type="text" class="input" id="middayCarbRatio" name="input3">
+        <input placeholder="Insulin" type="text" class="input" id="middayInsulinRatio" name="input3">
+      </div>
+    
+      <div class="row">
+        <label for="input4" class="timeLabel">17:00 - 21:30</label>
+        <input placeholder="Carbs" type="text" class="input" id="sunsetCarbRatio" name="input4">
+        <input placeholder="Insulin" type="text" class="input" id="sunsetInsulinRatio" name="input4">
+      </div>
+    
+      <div class="row">
+        <label for="input5" class="timeLabel">21:30 - 23:59</label>
+        <input placeholder="Carbs" type="text" class="input" id="nightCarbRatio" name="input5">
+        <input placeholder="Insulin" type="text" class="input" id="nightInsulinRatio" name="input5">
+      </div>
     </div>
+
+    <button type="button" id="submitRatios">Submit</button>
   <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
   <!--<script src="app.js"></script>-->
   <script>

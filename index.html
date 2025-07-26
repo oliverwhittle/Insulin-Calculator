@@ -10,28 +10,25 @@
   <link rel="icon" type="image/x-icon" href="https://img.icons8.com/external-flaticons-flat-flat-icons/64/null/external-diabetes-fitness-at-home-flaticons-flat-flat-icons.png">
 </head>
 <body>
-    <div id="background">
-        <button type="button" id="ratiosPage" onclick="window.location.href='page2.html';"><i class="fa-solid fa-sliders"></i></button>
-        <div id="body">
-            <div id="screen">
-                <div id="carbIntakeContainer">
-                    <label for="cabohydrateIntake">Enter your carbohydrate intake:</label>
-                    <input type="text" id="cabohydrateIntake" name="cabohydrateIntake" min="0">
-                </div>
+    <button type="button" id="ratiosPage" onclick="window.location.href='settings.html';"><i class="fa-solid fa-sliders"></i></button>
+    <div id="body">
+        <div id="screen">
+            <div id="carbIntakeContainer">
+                <label for="cabohydrateIntake">Enter your carbohydrate intake:</label>
+                <input type="text" id="cabohydrateIntake" name="cabohydrateIntake" min="0">
                 <button type="button" id="submitInsulin">Submit</button>
-            </div>   
+            </div>
         </div>
-        
         <div id="strip"></div>
         <div id="glucoseLevelContainer">
             <div id="bloodDrop">   
                 <input type="text" id="glucoseLevel" name="glucoseLevel" min="0">
             </div> 
             <label for="glucoseLevel">Enter your current glucose level:</label>
-        </div>
-        <div id="outputContainer">
-            <label id="insulinRequired">...</label>
-        </div>
+        </div> 
+    </div>
+    <div id="outputContainer">
+        <label id="insulinRequired">...</label>
     </div>
   <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
   <!--<script src="app.js"></script>-->
