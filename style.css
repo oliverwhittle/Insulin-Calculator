@@ -142,8 +142,9 @@ body {
 }
 
 #outputContainer label {
-    width: 10%;
+    margin-top: 20px;
+    width: 100%;
     height: 100%;
-    font-size: 60px;
+    font-size: 40px;
     text-align: center;
 }
